@@ -1,5 +1,6 @@
 import {
   AuthorAction,
+  IAuthor
 } from "@fullstackcraftllc/codevideo-types";
 
 /**
@@ -15,6 +16,14 @@ export class VirtualAuthor {
     if (actions) {
       this.applyActions(actions);
     }
+  }
+
+  /**
+   * Sets the values from an author object to the virtual author
+   * @param author The author to set the values from
+   */
+  setValuesFromAuthor(author: IAuthor) {
+    this.currentSpeechCaption = author.currentSpeechCaption;
   }
 
   /**
